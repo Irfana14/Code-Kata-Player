@@ -3,13 +3,21 @@ import java.lang.*;
 
 public class inttoRoman
 {
+	static int a;
+	static void takeinput() {
+		System.out.println("Please enter no less than 20");
+		Scanner sn= new Scanner(System.in);		
+		a = sn.nextInt();
+		if(a>20)
+			takeinput();
+	}
 	
 	static String converter(int input)
 	{
 		String result= new String();
 		while(input!=0)
 		{
-			if(input>=10)
+			while(input>=10)
 			{
 				result+='X';
 				input-=10;
@@ -20,18 +28,18 @@ public class inttoRoman
 				input-=9;
 			}
 			
-			if(input>=5)
+			while(input>=5)
 			{
 				result+='V';
 				input-=5;			
 				
 			}
-			if(input==4)
+			while(input==4)
 			{
 				result+="IV";
 				input-=4;
 			}
-			if(input<=3 && input!=0)
+			while(input<=3 && input!=0)
 			{
 				result+='I';
 				input-=1;
@@ -41,10 +49,7 @@ public class inttoRoman
 	}
 	public static void main(String[] args)
 	{		
-		System.out.println("Please enter a number");
-		Scanner sn= new Scanner(System.in);		
-		int a = sn.nextInt();
-		//sn.close();		
+		takeinput();
 		System.out.println(converter(a));
 		
 	}
