@@ -3,9 +3,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 public class Isomorphic
 {
-    static int size = 256; 
-    
-    static boolean areIsomorphic(String str1, String str2)
+   static boolean areIsomorphic(String str1, String str2)
     {
         int m = str1.length();
         int n = str2.length(); 
