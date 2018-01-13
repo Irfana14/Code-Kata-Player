@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class toCamelcase
@@ -22,7 +21,11 @@ public class toCamelcase
         		i++;
         		tempString[i] = Character.toUpperCase(tempString[i]);        
         	}
-        	i++;
+        	else
+        	{
+        		tempString[i] = Character.toLowerCase(tempString[i]);
+        		i++;
+        	}
         }
         CamelCased = new String(tempString);             
         return CamelCased;
