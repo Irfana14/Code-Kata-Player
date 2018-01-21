@@ -7,6 +7,7 @@ public class tofindnumberepeatedfirst
 	static void tofind(int[] arr)
 	{
 		int leng=arr.length;
+		int flag=0;
 		
 		A:for(int j=0;j<leng-1;j++)
 		{
@@ -15,10 +16,13 @@ public class tofindnumberepeatedfirst
 				if(arr[j]==arr[k])
 				{
 					System.out.println(arr[j]);
+					flag=1;
 					break A;
 				}
 			}
-		}		
+		}
+		if(flag==0)
+			System.out.println("Unique");
 
 	}
 	public static void main(String[] args)
