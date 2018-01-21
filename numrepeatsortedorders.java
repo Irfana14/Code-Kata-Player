@@ -32,9 +32,6 @@ public class numrepeatsortedorders
 			a++;
 		}
 		
-		for(int z : arr)
-			System.out.print(z+" ");
-		
 		int[] sortedarr = new int[t];
 		int z=0;
 		for(int v: arr)
@@ -58,7 +55,7 @@ public class numrepeatsortedorders
 				}
 			}
 		}
-		System.out.println();
+		System.out.println("Sorted array: ");
 	  for(int r: sortedarr)
 			System.out.print(r+" ");
 	}
